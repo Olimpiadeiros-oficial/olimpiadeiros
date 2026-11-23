@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071b42">     
+<meta name="theme-color" content="#071b42">
 <meta name="description" content="Olimpiadeiros — uma comunidade de estudantes que compartilham conhecimento, oportunidades e paixão pelas olimpíadas científicas.">
 <title>Olimpiadeiros | Conhecimento que conecta</title>
-<link rel="icon" type="image/png" href="  ">
+
+<link rel="icon" href="logotipo.jpeg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,14 +141,8 @@ header {
 .brand-symbol {
     width: 43px;
     height: 43px;
-    background: linear-gradient(135deg, var(--blue), var(--cyan));
-    color: white;
-    border-radius: 13px;
-    display: grid;
-    place-items: center;
-    font-family: 'Manrope';
-    font-weight: 800;
-    font-size: 21px;
+    object-fit: contain;
+    display: block;
 }
 
 .brand-name {
@@ -343,58 +337,26 @@ header {
     width: min(340px, 90%);
     aspect-ratio: 1;
     border-radius: 35px;
-    background: linear-gradient(145deg, #123d79, #071b42);
+    background: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    box-shadow: 0 30px 80px rgba(7,27,66,.25);
+    box-shadow: 0 30px 80px rgba(7,27,66,.15);
     transform: rotate(-4deg);
     position: relative;
     overflow: hidden;
+    padding: 25px;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .hero-logo::before,
 .hero-logo::after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgba(103,220,249,.35);
-    border-radius: 50%;
-}
-
-.hero-logo::before {
-    width: 270px;
-    height: 270px;
-}
-
-.hero-logo::after {
-    width: 205px;
-    height: 205px;
-}
-
-.hero-logo-symbol {
-    z-index: 1;
-    font-size: 100px;
-    font-family: 'Manrope';
-    font-weight: 800;
-    color: var(--light);
-}
-
-.hero-logo-name {
-    z-index: 1;
-    font-family: 'Manrope';
-    font-weight: 800;
-    font-size: 25px;
-    letter-spacing: 2px;
-}
-
-.hero-logo-caption {
-    z-index: 1;
-    margin-top: 9px;
-    color: #c9f3fd;
-    font-size: 10px;
-    letter-spacing: 4px;
+    display: none;
 }
 
 .float-card {
@@ -691,7 +653,7 @@ header {
 
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -724,6 +686,13 @@ header {
     font-family: 'Manrope';
     font-size: 23px;
     font-weight: 800;
+    overflow: hidden;
+}
+
+.partner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .partner-card h3 {
@@ -788,6 +757,13 @@ header {
     font-family: 'Manrope';
     font-size: 52px;
     font-weight: 800;
+    position: absolute;
+    z-index: 0;
+}
+
+.team-photo img {
+    position: relative;
+    z-index: 1;
 }
 
 .team-info {
@@ -1294,7 +1270,7 @@ footer {
     <div class="container header-inner">
 
         <a href="#inicio" class="brand">
-            <div class="brand-symbol">O</div>
+            <img src="logotipo.jpeg" alt="Olimpiadeiros" class="brand-symbol">
             <div class="brand-name">
                 OLIMPIADEIROS
                 <span>Conhecimento que conecta</span>
@@ -1349,9 +1325,7 @@ footer {
             <div class="float-card one">✦ Conhecimento compartilhado</div>
 
             <div class="hero-logo">
-                <div class="hero-logo-symbol">O</div>
-                <div class="hero-logo-name">OLIMPIADEIROS</div>
-                <div class="hero-logo-caption">2026</div>
+                <img src="logotipo.jpeg" alt="Logo Olimpiadeiros">
             </div>
 
             <div class="float-card two">∞ Aprender em comunidade</div>
@@ -1575,8 +1549,9 @@ footer {
         <div class="partners-grid">
 
             <article class="partner-card reveal">
-                <!-- Substituir pela logo oficial da ORLO -->
-                <div class="partner-logo">ORLO</div>
+                <div class="partner-logo">
+                    <img src="orlo.jpeg" alt="Logo ORLO">
+                </div>
                 <h3>ORLO</h3>
                 <small>Organização parceira</small>
                 <a href="https://www.instagram.com/orloolimpiada/"
@@ -1585,14 +1560,6 @@ footer {
             </article>
 
             <article class="partner-card reveal delay-1">
-                <!-- Substituir pela logo oficial do Instituto Fibonacci -->
-                <div class="partner-logo">IF</div>
-                <h3>Instituto Fibonacci</h3>
-                <small>Parceria sugerida no documento</small>
-                <span class="section-tag">Educação</span>
-            </article>
-
-            <article class="partner-card reveal delay-2">
                 <div class="partner-logo">+</div>
                 <h3>Novas conexões</h3>
                 <small>Espaço para futuras parcerias</small>
@@ -1620,8 +1587,7 @@ footer {
 
             <article class="team-card reveal">
                 <div class="team-photo">
-                    <!-- inserir: imagens/gabriel.jpg -->
-                    <img src="imagens/gabriel.jpg" alt="Gabriel Moscon Duarte"
+                    <img src="gabriel.jpeg" alt="Gabriel Moscon Duarte"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">G</span>
                 </div>
@@ -1634,8 +1600,7 @@ footer {
 
             <article class="team-card reveal delay-1">
                 <div class="team-photo">
-                    <!-- inserir: imagens/nowak.jpg -->
-                    <img src="imagens/nowak.jpg" alt="Nowak"
+                    <img src="cinza.jpeg" alt="Nowak"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">N</span>
                 </div>
@@ -1648,8 +1613,7 @@ footer {
 
             <article class="team-card reveal delay-2">
                 <div class="team-photo">
-                    <!-- inserir: imagens/thalysson.jpg -->
-                    <img src="imagens/thalysson.jpg" alt="Thalysson Renan"
+                    <img src="violao.jpeg" alt="Thalysson Renan"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">T</span>
                 </div>
@@ -1662,8 +1626,7 @@ footer {
 
             <article class="team-card reveal delay-3">
                 <div class="team-photo">
-                    <!-- inserir: imagens/lavinia.jpg -->
-                    <img src="imagens/lavinia.jpg" alt="Lavínia"
+                    <img src="lavinia.jpeg" alt="Lavínia"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">L</span>
                 </div>
@@ -1676,8 +1639,7 @@ footer {
 
             <article class="team-card reveal">
                 <div class="team-photo">
-                    <!-- inserir: imagens/elieu.jpg -->
-                    <img src="imagens/elieu.jpg" alt="∃ᒪIΣ∃Ц ∀."
+                    <img src="espelho.jpeg" alt="∃ᒪIΣ∃Ц ∀."
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">E</span>
                 </div>
@@ -1690,8 +1652,7 @@ footer {
 
             <article class="team-card reveal delay-1">
                 <div class="team-photo">
-                    <!-- inserir: imagens/sara.jpg -->
-                    <img src="imagens/sara.jpg" alt="Sara"
+                    <img src="vestido.jpeg" alt="Sara"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">S</span>
                 </div>
@@ -1704,8 +1665,7 @@ footer {
 
             <article class="team-card reveal delay-2">
                 <div class="team-photo">
-                    <!-- inserir: imagens/davi.jpg -->
-                    <img src="imagens/davi.jpg" alt="Davi Nascimento Jovedi"
+                    <img src="praia.jpeg" alt="Davi Nascimento Jovedi"
                          onerror="this.style.display='none'">
                     <span class="photo-placeholder">D</span>
                 </div>
@@ -1830,7 +1790,7 @@ footer {
 
             <div class="footer-brand">
                 <a href="#inicio" class="brand">
-                    <div class="brand-symbol">O</div>
+                    <img src="logotipo.jpeg" alt="Olimpiadeiros" class="brand-symbol">
                     <div class="brand-name">
                         OLIMPIADEIROS
                         <span>Conhecimento que conecta</span>
@@ -1939,7 +1899,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         message;
 
     const mailto =
-        'mailto:olimpiadeirosoficial@gmail.com' +
+        'mailto:olimpiadeirosoficial2109@gmail.com' +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
 
