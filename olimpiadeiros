@@ -1,0 +1,1950 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b42">
+<meta name="description" content="Olimpiadeiros — uma comunidade de estudantes que compartilham conhecimento, oportunidades e paixão pelas olimpíadas científicas.">
+<title>Olimpiadeiros | Conhecimento que conecta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #071b42;
+    --blue: #123d79;
+    --blue2: #1766a8;
+    --cyan: #09c3f1;
+    --light: #67dcf9;
+    --pale: #c9f3fd;
+    --white: #ffffff;
+    --text: #171823;
+    --muted: #63758b;
+    --wine: #670d30;
+    --bg: #f7fbfd;
+    --border: #e5edf4;
+    --shadow: 0 15px 45px rgba(7,27,66,.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 105px 0;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--blue2);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+.section-tag::before {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background: var(--cyan);
+}
+
+.section-title {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.17;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+.section-description {
+    color: var(--muted);
+    max-width: 650px;
+    line-height: 1.85;
+    margin-top: 19px;
+    font-size: 15px;
+}
+
+.section-heading {
+    margin-bottom: 48px;
+}
+
+/* HEADER */
+
+header {
+    height: 82px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(7,27,66,.07);
+    transition: .3s;
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-symbol {
+    width: 43px;
+    height: 43px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: white;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 21px;
+}
+
+.brand-name {
+    font-family: 'Manrope';
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.brand-name span {
+    display: block;
+    color: var(--blue2);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+
+.nav a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #40516a;
+    transition: .2s;
+}
+
+.nav a:hover {
+    color: var(--blue2);
+}
+
+.nav .nav-contact {
+    background: var(--navy);
+    color: white;
+    padding: 13px 21px;
+    border-radius: 7px;
+}
+
+.nav .nav-contact:hover {
+    background: var(--blue2);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--navy);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 740px;
+    padding: 160px 0 100px;
+    background:
+        radial-gradient(circle at 85% 30%, rgba(9,195,241,.17), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(103,220,249,.17), transparent 35%),
+        linear-gradient(135deg, #ffffff 0%, #f0faff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    border: 1px solid rgba(9,195,241,.16);
+    border-radius: 50%;
+    right: -170px;
+    top: 100px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(9,195,241,.13);
+    border-radius: 50%;
+    right: -100px;
+    top: 170px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 65px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: white;
+    padding: 10px 16px;
+    border: 1px solid #d9f1fa;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 27px;
+}
+
+.hero-badge i {
+    width: 8px;
+    height: 8px;
+    background: var(--cyan);
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-family: 'Manrope';
+    color: var(--navy);
+    font-size: clamp(42px, 5.5vw, 67px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--blue2);
+}
+
+.hero-text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 550px;
+    margin: 25px 0 33px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .25s;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    color: white;
+    background: var(--navy);
+}
+
+.btn-primary:hover {
+    background: var(--blue2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(18,61,121,.2);
+}
+
+.btn-outline {
+    border-color: #d6e5ef;
+    color: var(--navy);
+    background: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--cyan);
+    transform: translateY(-3px);
+}
+
+.hero-visual {
+    min-height: 400px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.hero-logo {
+    width: min(340px, 90%);
+    aspect-ratio: 1;
+    border-radius: 35px;
+    background: linear-gradient(145deg, #123d79, #071b42);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 30px 80px rgba(7,27,66,.25);
+    transform: rotate(-4deg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-logo::before,
+.hero-logo::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(103,220,249,.35);
+    border-radius: 50%;
+}
+
+.hero-logo::before {
+    width: 270px;
+    height: 270px;
+}
+
+.hero-logo::after {
+    width: 205px;
+    height: 205px;
+}
+
+.hero-logo-symbol {
+    z-index: 1;
+    font-size: 100px;
+    font-family: 'Manrope';
+    font-weight: 800;
+    color: var(--light);
+}
+
+.hero-logo-name {
+    z-index: 1;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.hero-logo-caption {
+    z-index: 1;
+    margin-top: 9px;
+    color: #c9f3fd;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.float-card {
+    position: absolute;
+    background: white;
+    padding: 16px 19px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 800;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.float-card.one {
+    top: 35px;
+    left: 0;
+}
+
+.float-card.two {
+    bottom: 45px;
+    right: -5px;
+    animation-delay: 1s;
+}
+
+@keyframes floating {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: start;
+}
+
+.about-copy p {
+    color: #5c6a7c;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 17px;
+}
+
+.about-copy strong {
+    color: var(--navy);
+}
+
+.about-highlight {
+    background: #effaff;
+    border-left: 3px solid var(--cyan);
+    padding: 25px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 28px;
+    color: var(--blue);
+    font-family: 'Manrope';
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 800;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.about-card {
+    padding: 28px 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.about-card:hover {
+    border-color: var(--cyan);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.about-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #e8f9ff;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    color: var(--navy);
+    font-family: 'Manrope';
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ACTIVITIES */
+
+.activities {
+    background: var(--bg);
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 29px;
+    transition: .3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: #a8e9f9;
+}
+
+.activity-number {
+    font-family: 'Manrope';
+    font-size: 33px;
+    font-weight: 800;
+    color: #c6eef8;
+    margin-bottom: 20px;
+}
+
+.activity-card h3 {
+    font-family: 'Manrope';
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.activity-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    min-height: 240px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    right: -45px;
+    bottom: -70px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(9,195,241,.22);
+    border-radius: 50%;
+}
+
+.project-label {
+    color: var(--blue2);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-family: 'Manrope';
+    font-size: 21px;
+    margin: 18px 0 12px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 410px;
+}
+
+.project-card.featured {
+    background: linear-gradient(135deg, var(--navy), #15548b);
+    border: none;
+}
+
+.project-card.featured .project-label {
+    color: var(--light);
+}
+
+.project-card.featured h3,
+.project-card.featured p {
+    color: white;
+}
+
+.project-card.featured p {
+    opacity: .78;
+}
+
+/* OLYMPIADS */
+
+.olympiads {
+    background: #f1faff;
+}
+
+.olympiad-banner {
+    background: linear-gradient(115deg, #071b42, #14568e);
+    color: white;
+    padding: 50px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.olympiad-banner::after {
+    content: "∑";
+    position: absolute;
+    right: 160px;
+    top: -75px;
+    font-size: 270px;
+    color: rgba(255,255,255,.04);
+    font-family: serif;
+}
+
+.olympiad-banner h3 {
+    font-family: 'Manrope';
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.olympiad-banner p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #c9e8f7;
+    max-width: 590px;
+}
+
+.olympiad-banner .btn {
+    flex-shrink: 0;
+    background: var(--cyan);
+    color: var(--navy);
+    z-index: 1;
+}
+
+.olympiad-banner .btn:hover {
+    background: white;
+}
+
+/* PARTNERS */
+
+.partners {
+    background: white;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.partner-card {
+    min-height: 180px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: .3s;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.partner-logo {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #effaff;
+    color: var(--blue);
+    font-family: 'Manrope';
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.partner-card h3 {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.partner-card small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* TEAM */
+
+.team {
+    background: var(--bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 21px;
+}
+
+.team-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(7,27,66,.12);
+}
+
+.team-photo {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #dff7ff, #b5eaf8);
+    display: grid;
+    place-items: center;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.team-card:hover .team-photo img {
+    transform: scale(1.07);
+}
+
+.photo-placeholder {
+    color: var(--blue);
+    font-family: 'Manrope';
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.team-info {
+    padding: 21px;
+}
+
+.team-role {
+    color: var(--blue2);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    font-weight: 800;
+}
+
+.team-info h3 {
+    font-family: 'Manrope';
+    color: var(--navy);
+    font-size: 15px;
+    margin: 8px 0 13px;
+}
+
+.team-quote {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    min-height: 35px;
+    font-style: italic;
+}
+
+.team-card:nth-child(1) .team-photo {
+    background: #d9f2fa;
+}
+
+.team-card:nth-child(2) .team-photo {
+    background: #e4f2ff;
+}
+
+.team-card:nth-child(3) .team-photo {
+    background: #d4f4fa;
+}
+
+/* JOIN */
+
+.join {
+    background: white;
+}
+
+.join-box {
+    background: linear-gradient(120deg, #071b42, #124b80);
+    border-radius: 18px;
+    padding: 65px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.join-box::before,
+.join-box::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(103,220,249,.2);
+    border-radius: 50%;
+}
+
+.join-box::before {
+    width: 330px;
+    height: 330px;
+    top: -210px;
+    left: -70px;
+}
+
+.join-box::after {
+    width: 400px;
+    height: 400px;
+    bottom: -300px;
+    right: -90px;
+}
+
+.join-box h2 {
+    font-family: 'Manrope';
+    font-size: clamp(28px, 4vw, 39px);
+    letter-spacing: -1px;
+    margin-bottom: 17px;
+    position: relative;
+}
+
+.join-box p {
+    color: #c6e9f8;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: auto auto 28px;
+    position: relative;
+}
+
+.join-box .btn {
+    background: var(--cyan);
+    color: var(--navy);
+    position: relative;
+}
+
+.join-box .btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f7fbfd;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 65px;
+}
+
+.contact-details {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    background: #e2f7ff;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    font-size: 18px;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--navy);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.contact-item span,
+.contact-item a {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.contact-form {
+    padding: 32px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 35px rgba(7,27,66,.04);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: #f8fbfd;
+    border: 1px solid #e4edf3;
+    border-radius: 7px;
+    outline: none;
+    font-size: 12px;
+    color: var(--text);
+    transition: .2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--cyan);
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 125px;
+}
+
+.form-submit {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    background: var(--navy);
+    color: white;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.form-submit:hover {
+    background: var(--blue2);
+}
+
+/* FOOTER */
+
+footer {
+    background: #06152f;
+    color: white;
+    padding: 65px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr .7fr .8fr;
+    gap: 55px;
+    padding-bottom: 50px;
+}
+
+.footer-brand .brand-name {
+    color: white;
+}
+
+.footer-brand p {
+    color: #9db2c9;
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 320px;
+    margin-top: 20px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    margin-bottom: 22px;
+    color: #c9f3fd;
+}
+
+.footer-column a {
+    display: block;
+    color: #9db2c9;
+    font-size: 12px;
+    margin-bottom: 14px;
+    transition: .2s;
+}
+
+.footer-column a:hover {
+    color: var(--cyan);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    color: #8298b0;
+    font-size: 10px;
+    gap: 15px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: .1s; }
+.delay-2 { transition-delay: .2s; }
+.delay-3 { transition-delay: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width: 760px) {
+    header {
+        height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 20px;
+        box-shadow: 0 15px 25px rgba(7,27,66,.1);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        font-size: 13px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav .nav-contact {
+        margin-top: 10px;
+        text-align: center;
+        padding: 14px;
+    }
+
+    .hero {
+        padding: 130px 0 65px;
+        min-height: auto;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+        margin-top: 20px;
+    }
+
+    .hero-logo {
+        width: 270px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .olympiad-banner {
+        padding: 35px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .join-box {
+        padding: 45px 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1/-1;
+    }
+}
+
+@media(max-width: 480px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .team-photo {
+        height: 165px;
+    }
+
+    .team-info {
+        padding: 14px;
+    }
+
+    .team-info h3 {
+        font-size: 13px;
+    }
+
+    .team-quote {
+        font-size: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .about-cards {
+        gap: 10px;
+    }
+
+    .about-card {
+        padding: 20px 15px;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .float-card.one {
+        left: -5px;
+    }
+
+    .float-card.two {
+        right: -5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="container header-inner">
+
+        <a href="#inicio" class="brand">
+            <div class="brand-symbol">O</div>
+            <div class="brand-name">
+                OLIMPIADEIROS
+                <span>Conhecimento que conecta</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav class="nav" id="navigation">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Quem somos</a>
+            <a href="#atividades">Atividades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#parceiros">Parceiros</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#contato" class="nav-contact">Fale conosco ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="container hero-grid">
+
+        <div class="reveal">
+            <div class="hero-badge">
+                <i></i>
+                UMA COMUNIDADE EM CONSTRUÇÃO
+            </div>
+
+            <h1>
+                Muito além das
+                <span>olimpíadas.</span>
+            </h1>
+
+            <p class="hero-text">
+                Um espaço para estudantes que compartilham conhecimento,
+                descobertas, oportunidades e sonhos. Aprender também é
+                conhecer pessoas, trocar experiências e construir algo juntos.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#sobre" class="btn btn-primary">Conheça nossa história ↗</a>
+                <a href="#atividades" class="btn btn-outline">Explore a comunidade</a>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2">
+            <div class="float-card one">✦ Conhecimento compartilhado</div>
+
+            <div class="hero-logo">
+                <div class="hero-logo-symbol">O</div>
+                <div class="hero-logo-name">OLIMPIADEIROS</div>
+                <div class="hero-logo-caption">2026</div>
+            </div>
+
+            <div class="float-card two">∞ Aprender em comunidade</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section about" id="sobre">
+    <div class="container about-grid">
+
+        <div class="about-copy reveal">
+            <div class="section-tag">Nossa identidade</div>
+            <h2 class="section-title">Uma ideia que se transformou em comunidade.</h2>
+
+            <p>
+                Quando pensamos em olimpíadas científicas, geralmente pensamos
+                em matemática e, no máximo, em física e química. Mas esse
+                universo se resume a essa pequena parcela do conhecimento?
+            </p>
+
+            <p>
+                Foi dessa percepção que surgiram os <strong>Olimpiadeiros</strong>.
+                O que começou como uma tentativa de criar um grupo de estudos
+                tomou proporções que não seriam reais nem nos nossos maiores sonhos.
+            </p>
+
+            <p>
+                Hoje, somos uma comunidade com um número crescente de membros,
+                diversos grupos voltados a diferentes interesses e pessoas que
+                compartilham experiências, conhecimentos e, acima de tudo, sonhos.
+            </p>
+
+            <p>
+                Não queremos ser apenas um espaço para resolver questões ou
+                trocar materiais de estudo. Acreditamos na importância de
+                aproximar estudantes, divulgar oportunidades, incentivar a
+                curiosidade e construir um ambiente divertido e acolhedor.
+            </p>
+
+            <div class="about-highlight">
+                Os Olimpiadeiros ainda estão só começando.
+            </div>
+        </div>
+
+        <div class="about-cards reveal delay-2">
+
+            <div class="about-card">
+                <div class="about-icon">◎</div>
+                <h3>Conexão</h3>
+                <p>Estudantes que encontram pessoas com interesses e objetivos semelhantes.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">✦</div>
+                <h3>Curiosidade</h3>
+                <p>Um ambiente que incentiva descobertas e diferentes áreas do conhecimento.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">↗</div>
+                <h3>Oportunidades</h3>
+                <p>Divulgação de olimpíadas, iniciativas acadêmicas e possibilidades de desenvolvimento.</p>
+            </div>
+
+            <div class="about-card">
+                <div class="about-icon">∞</div>
+                <h3>Participação</h3>
+                <p>Uma comunidade na qual os próprios membros podem propor e desenvolver ideias.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ATIVIDADES -->
+<section class="section activities" id="atividades">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="section-tag">O dia a dia</div>
+            <h2 class="section-title">Sempre tem alguma coisa acontecendo.</h2>
+            <p class="section-description">
+                Procuramos oferecer um espaço para diferentes formas de aprender,
+                interagir e compartilhar experiências.
+            </p>
+        </div>
+
+        <div class="activity-grid">
+
+            <article class="activity-card reveal">
+                <div class="activity-number">01</div>
+                <h3>Estudos e questões</h3>
+                <p>Grupos dedicados à resolução, discussão e compartilhamento de questões de diferentes áreas.</p>
+            </article>
+
+            <article class="activity-card reveal delay-1">
+                <div class="activity-number">02</div>
+                <h3>Materiais e arquivos</h3>
+                <p>Espaços para compartilhar materiais, referências, conteúdos e recursos de aprendizagem.</p>
+            </article>
+
+            <article class="activity-card reveal delay-2">
+                <div class="activity-number">03</div>
+                <h3>Notícias e oportunidades</h3>
+                <p>Divulgação de informações relevantes, olimpíadas, eventos e oportunidades acadêmicas.</p>
+            </article>
+
+            <article class="activity-card reveal">
+                <div class="activity-number">04</div>
+                <h3>Cultura e interesses</h3>
+                <p>Conversas sobre xadrez, música, literatura e muitos outros assuntos.</p>
+            </article>
+
+            <article class="activity-card reveal delay-1">
+                <div class="activity-number">05</div>
+                <h3>Interação</h3>
+                <p>Um ambiente para conhecer pessoas, trocar experiências e conversar sobre assuntos diversos.</p>
+            </article>
+
+            <article class="activity-card reveal delay-2">
+                <div class="activity-number">06</div>
+                <h3>Novas iniciativas</h3>
+                <p>Espaço para apresentar ideias, contribuir com projetos e participar de atividades coletivas.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="section projects" id="projetos">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="section-tag">O que estamos construindo</div>
+            <h2 class="section-title">Ideias que ganham forma.</h2>
+            <p class="section-description">
+                Além das atividades cotidianas, buscamos desenvolver projetos,
+                estabelecer parcerias e criar novas oportunidades.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card featured reveal">
+                <div class="project-label">Projeto em desenvolvimento</div>
+                <h3>Grande lista de olimpíadas</h3>
+                <p>
+                    Uma iniciativa da equipe para reunir informações sobre
+                    olimpíadas científicas e facilitar o acesso dos estudantes
+                    a diferentes oportunidades.
+                </p>
+            </article>
+
+            <article class="project-card reveal delay-1">
+                <div class="project-label">Comunicação</div>
+                <h3>Redes sociais</h3>
+                <p>
+                    Uma equipe dedicada à comunicação, divulgação de conteúdos
+                    e aproximação da comunidade com estudantes de diferentes lugares.
+                </p>
+            </article>
+
+            <article class="project-card reveal">
+                <div class="project-label">Tecnologia</div>
+                <h3>Nosso site</h3>
+                <p>
+                    Um espaço digital para apresentar a organização, divulgar
+                    iniciativas e ampliar o alcance das atividades.
+                </p>
+            </article>
+
+            <article class="project-card reveal delay-1">
+                <div class="project-label">Colaboração</div>
+                <h3>Iniciativas conjuntas</h3>
+                <p>
+                    Projetos desenvolvidos em conjunto com outras organizações
+                    e iniciativas educacionais, fortalecendo conexões e possibilidades.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- OLIMPÍADAS -->
+<section class="section olympiads">
+    <div class="container">
+
+        <div class="olympiad-banner reveal">
+            <div>
+                <h3>O universo das olimpíadas é muito maior.</h3>
+                <p>
+                    Uma das maiores listas de olimpíadas está sendo construída
+                    pela nossa equipe. Queremos aproximar estudantes de
+                    oportunidades que vão muito além das competições mais conhecidas.
+                </p>
+            </div>
+
+            <a href="#projetos" class="btn">Conheça os projetos ↗</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="section partners" id="parceiros">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="section-tag">Conexões</div>
+            <h2 class="section-title">Quem caminha conosco.</h2>
+            <p class="section-description">
+                Acreditamos que a colaboração entre iniciativas educacionais
+                fortalece projetos e amplia oportunidades.
+            </p>
+        </div>
+
+        <div class="partners-grid">
+
+            <article class="partner-card reveal">
+                <!-- Substituir pela logo oficial da ORLO -->
+                <div class="partner-logo">ORLO</div>
+                <h3>ORLO</h3>
+                <small>Organização parceira</small>
+                <a href="https://www.instagram.com/orloolimpiada/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="section-tag">Conhecer ↗</a>
+            </article>
+
+            <article class="partner-card reveal delay-1">
+                <!-- Substituir pela logo oficial do Instituto Fibonacci -->
+                <div class="partner-logo">IF</div>
+                <h3>Instituto Fibonacci</h3>
+                <small>Parceria sugerida no documento</small>
+                <span class="section-tag">Educação</span>
+            </article>
+
+            <article class="partner-card reveal delay-2">
+                <div class="partner-logo">+</div>
+                <h3>Novas conexões</h3>
+                <small>Espaço para futuras parcerias</small>
+                <a href="#contato" class="section-tag">Entre em contato ↗</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="section team" id="equipe">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="section-tag">Pessoas por trás da iniciativa</div>
+            <h2 class="section-title">Conheça nossa equipe.</h2>
+            <p class="section-description">
+                Uma comunidade é construída por pessoas. Conheça alguns dos
+                integrantes que ajudam a desenvolver e organizar os Olimpiadeiros.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <article class="team-card reveal">
+                <div class="team-photo">
+                    <!-- inserir: imagens/gabriel.jpg -->
+                    <img src="imagens/gabriel.jpg" alt="Gabriel Moscon Duarte"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">G</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Fundador</div>
+                    <h3>Gabriel Moscon Duarte</h3>
+                    <p class="team-quote">“Kylian Mbappe Pitágorador”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-1">
+                <div class="team-photo">
+                    <!-- inserir: imagens/nowak.jpg -->
+                    <img src="imagens/nowak.jpg" alt="Nowak"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">N</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Cofundador</div>
+                    <h3>Nowak</h3>
+                    <p class="team-quote">“Só sei que nada sei”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-2">
+                <div class="team-photo">
+                    <!-- inserir: imagens/thalysson.jpg -->
+                    <img src="imagens/thalysson.jpg" alt="Thalysson Renan"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">T</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Cofundador</div>
+                    <h3>Thalysson Renan</h3>
+                    <p class="team-quote">“Ser humano”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-3">
+                <div class="team-photo">
+                    <!-- inserir: imagens/lavinia.jpg -->
+                    <img src="imagens/lavinia.jpg" alt="Lavínia"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">L</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Administradora</div>
+                    <h3>Lavínia</h3>
+                    <p class="team-quote">“Livro+geome=Livro de geometria”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal">
+                <div class="team-photo">
+                    <!-- inserir: imagens/elieu.jpg -->
+                    <img src="imagens/elieu.jpg" alt="∃ᒪIΣ∃Ц ∀."
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">E</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Administrador</div>
+                    <h3>∃ᒪIΣ∃Ц ∀.</h3>
+                    <p class="team-quote">“Ex.: pai da Flávia, gerente”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-1">
+                <div class="team-photo">
+                    <!-- inserir: imagens/sara.jpg -->
+                    <img src="imagens/sara.jpg" alt="Sara"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">S</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Administradora</div>
+                    <h3>Sara</h3>
+                    <p class="team-quote">“Sara”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-2">
+                <div class="team-photo">
+                    <!-- inserir: imagens/davi.jpg -->
+                    <img src="imagens/davi.jpg" alt="Davi Nascimento Jovedi"
+                         onerror="this.style.display='none'">
+                    <span class="photo-placeholder">D</span>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Administrador</div>
+                    <h3>Davi Nascimento Jovedi</h3>
+                    <p class="team-quote">“ITAéMaisFácilQueTesteDoPesinho”</p>
+                </div>
+            </article>
+
+            <article class="team-card reveal delay-3">
+                <div class="team-photo">
+                    <div class="photo-placeholder">G</div>
+                </div>
+                <div class="team-info">
+                    <div class="team-role">Administrador</div>
+                    <h3>Guilherme Almeida</h3>
+                    <p class="team-quote">“Harry kane do saboeiro”</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- PARTICIPE -->
+<section class="section join">
+    <div class="container">
+        <div class="join-box reveal">
+            <h2>Tem espaço para você aqui.</h2>
+            <p>
+                Ideias podem surgir de qualquer integrante. Você pode compartilhar
+                descobertas, apresentar propostas, participar de projetos ou
+                simplesmente conhecer pessoas com interesses semelhantes.
+            </p>
+            <a href="https://www.instagram.com/olimpiadeiros_oficial/"
+               target="_blank" rel="noopener noreferrer" class="btn">
+                Conheça nossa comunidade ↗
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section contact" id="contato">
+    <div class="container contact-grid">
+
+        <div class="reveal">
+            <div class="section-tag">Vamos conversar</div>
+            <h2 class="section-title">Nos contate!</h2>
+            <p class="section-description">
+                Tem uma ideia, quer desenvolver um projeto conosco ou deseja
+                conhecer melhor os Olimpiadeiros? Estamos disponíveis para conversar.
+            </p>
+
+            <div class="contact-details">
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <div>
+                        <strong>E-mail</strong>
+                        <a href="mailto:olimpiadeirosoficial@gmail.com">
+                            olimpiadeirosoficial@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">◎</div>
+                    <div>
+                        <strong>Instagram</strong>
+                        <a href="https://www.instagram.com/olimpiadeiros_oficial/"
+                           target="_blank" rel="noopener noreferrer">
+                            @olimpiadeiros_oficial
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <form class="contact-form reveal delay-2" id="contactForm">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Seu nome</label>
+                    <input id="name" type="text" placeholder="Como podemos te chamar?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Seu e-mail</label>
+                    <input id="email" type="email" placeholder="seu@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Assunto</label>
+                <input id="subject" type="text" placeholder="Sobre o que deseja conversar?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+                Enviar mensagem ↗
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="#inicio" class="brand">
+                    <div class="brand-symbol">O</div>
+                    <div class="brand-name">
+                        OLIMPIADEIROS
+                        <span>Conhecimento que conecta</span>
+                    </div>
+                </a>
+
+                <p>
+                    Uma comunidade de estudantes que compartilham experiências,
+                    conhecimento e sonhos. E que ainda tem muito pela frente.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>NAVEGAÇÃO</h4>
+                <a href="#sobre">Quem somos</a>
+                <a href="#atividades">Atividades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#parceiros">Parceiros</a>
+                <a href="#equipe">Nossa equipe</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>CONTATO</h4>
+                <a href="https://www.instagram.com/olimpiadeiros_oficial/"
+                   target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                <a href="mailto:olimpiadeirosoficial@gmail.com">E-mail ↗</a>
+                <a href="#contato">Fale conosco</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Olimpiadeiros. Todos os direitos reservados.</span>
+            <span>Feito para conectar conhecimento e pessoas.</span>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+// MENU MOBILE
+const menuToggle = document.getElementById('menuToggle');
+const navigation = document.getElementById('navigation');
+
+menuToggle.addEventListener('click', () => {
+    const opened = navigation.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', opened);
+    menuToggle.textContent = opened ? '×' : '☰';
+});
+
+// FECHAR MENU AO CLICAR EM UM LINK
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        navigation.classList.remove('active');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// ANIMAÇÕES DE ENTRADA
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+
+// HEADER AO ROLAR
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+
+    if (window.scrollY > 40) {
+        header.style.boxShadow = '0 8px 25px rgba(7,27,66,.07)';
+    } else {
+        header.style.boxShadow = 'none';
+    }
+});
+
+// FORMULÁRIO DE CONTATO
+// Abre o aplicativo de e-mail do visitante.
+// Para envio direto pelo site, será necessário integrar um backend ou serviço de formulários.
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !subject || !message) {
+        alert('Preencha todos os campos.');
+        return;
+    }
+
+    const body =
+        'Nome: ' + name + '\n' +
+        'E-mail: ' + email + '\n\n' +
+        message;
+
+    const mailto =
+        'mailto:olimpiadeirosoficial@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+});
+</script>
+
+</body>
+</html>
